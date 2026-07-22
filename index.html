@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manolly M. Nasr — Frontend Developer</title>
+<meta name="description" content="Portfolio of Manolly M. Nasr, a frontend developer focused on clean code, accessible interfaces, and interaction design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav id="site-nav">
+  <a href="#top" class="logo">Manolly<span class="accent">.</span>Nasr</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="navLinks">
+    <li><a href="#about"><span class="tag">01</span>About</a></li>
+    <li><a href="#projects"><span class="tag">02</span>Projects</a></li>
+    <li><a href="#contact"><span class="tag">03</span>Contact</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">Frontend Developer</span>
+        <h1>I build fast, accessible interfaces for the web.</h1>
+        <p class="hero-sub">I'm Manolly M. Nasr. I care about the details most people never consciously notice — response time, tab order, code that still reads clearly six months later.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View my work</a>
+          <a href="#contact" class="btn-ghost">Get in touch →</a>
+        </div>
+      </div>
+      <div class="code-card" data-reveal aria-hidden="true">
+        <div class="code-titlebar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">about-me.js</span>
+        </div>
+        <pre class="code-body"><code><span class="c-kw">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Manolly M. Nasr"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"Frontend Developer"</span>,
+  <span class="c-prop">focus</span>: [<span class="c-str">"React"</span>, <span class="c-str">"TypeScript"</span>, <span class="c-str">"Accessibility"</span>],
+  <span class="c-prop">status</span>: <span class="c-str">"open to opportunities"</span>,
+};</code><span class="cursor" aria-hidden="true"></span></pre>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </header>
+
+  <section id="about" class="content-section">
+    <div class="section-head" data-reveal>
+      <span class="section-eyebrow">01 / About</span>
+      <h2>A little about how I work.</h2>
+    </div>
+
+    <div class="about-grid">
+      <p class="about-copy" data-reveal>
+        I'm a frontend developer who enjoys turning ambiguous problems into interfaces that feel obvious in hindsight.
+        I'm comfortable owning a feature end to end — from a rough design file to a component that's tested,
+        responsive, and easy for the next developer to pick up. I like clean code, but I like shipping more:
+        the two aren't in conflict when you're deliberate about it.
+      </p>
+
+      <div class="stack-card" data-reveal>
+        <div class="code-titlebar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">package.json</span>
+        </div>
+        <div class="stack-body">
+          <p class="stack-label">// core stack</p>
+          <ul class="tag-list">
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>HTML5</li>
+            <li>CSS / Sass</li>
+            <li>Git</li>
+          </ul>
+          <p class="stack-label">// also comfortable with</p>
+          <ul class="tag-list muted">
+            <li>Node.js</li>
+            <li>REST APIs</li>
+            <li>Figma → code</li>
+            <li>Testing (Jest)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="content-section">
+    <div class="section-head" data-reveal>
+      <span class="section-eyebrow">02 / Projects</span>
+      <h2>Selected work.</h2>
+      <p class="section-note">A few projects I've built or shipped. More on request.</p>
+    </div>
+
+    <div class="project-grid" data-reveal>
+
+      <a href="M Power Company/m-power-solar.html" class="project-card">
+        <div class="project-top">
+          <span class="project-lang">Three.js · JS · CSS</span>
+        </div>
+        <h3>M Power Solar Systems</h3>
+        <p>A 3D marketing site for a solar installation company, with a scroll-driven Three.js hero and a low-poly network background.</p>
+        <span class="project-link">View project →</span>
+      </a>
+      <a href="Junelin/Junelin.html" class="project-card">
+        <div class="project-top">
+          <span class="project-lang">JS · CSS · HTML</span>
+        </div>
+        <h3>Junelin the Village</h3>
+        <p>An elegant and responsive website for an event venue, featuring a dynamic gallery and smooth scroll animations.</p>
+        <span class="project-link">View project →</span>
+      </a>
+      <a href="le paradis/paradis.html" class="project-card">
+        <div class="project-top">
+          <span class="project-lang">JS · CSS · HTML</span>
+        </div>
+        <h3>Le Paradis</h3>
+        <p>A luxurious and responsive website for a fine dining restaurant, showcasing an exquisite menu and online reservation system.</p>
+        <span class="project-link">View project →</span>
+      </a>
+
+  </section>
+
+  <section id="contact" class="content-section">
+    <div class="section-head" data-reveal>
+      <span class="section-eyebrow">03 / Contact</span>
+      <h2>Let's work together.</h2>
+      <p class="section-note">Reach out directly, or find me on GitHub and LinkedIn.</p>
+    </div>
+
+    <div class="terminal-card" data-reveal>
+      <div class="code-titlebar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="code-filename">contact.sh</span>
+      </div>
+      <div class="terminal-body">
+        <p class="term-line"><span class="prompt">manolly@portfolio ~ %</span> contact --show</p>
+        <p class="term-line"><span class="term-key">email</span><button class="term-value copy-btn" data-copy="manollynasr@gmail.com">manollynasr@gmail.com<span class="copy-hint">click to copy</span></button></p>
+        <p class="term-line"><span class="term-key">github</span><a class="term-value" href="https://github.com/C0BRA961" target="_blank" rel="noopener">https://github.com/C0BRA961</a></p>
+        <p class="term-line"><span class="term-key">linkedin</span><a class="term-value" href="https://www.linkedin.com/in/manolly-nasr-348015179/" target="_blank" rel="noopener">https://linkedin.com/in/ManollyNasr</a></p>
+        <p class="term-line"><span class="prompt">manolly@portfolio ~ %</span> <span class="cursor inline" aria-hidden="true"></span></p>
+      </div>
+    </div>
+
+    <a href="mailto:manollynasr@gmail.com" class="btn-primary contact-cta">Say hello</a>
+  </section>
+  
+</main>
+
+<footer>
+  <span>© <span id="year"></span> Manolly M. Nasr</span>
+  <span class="footer-note">Built from scratch — no template.</span>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
+
+<script src="script.js"></script>
+<script src="portfolio.js"></script> 
+
+</body>
+</html>

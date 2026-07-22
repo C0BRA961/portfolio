@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M Power Solar Systems — Every rooftop is a power plant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="m-power-solar.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+  <div class="brand"><span class="mark"></span><span class="m">M</span>&nbsp;Power Solar Systems</div>
+  <div class="nav-links" id="nav-links">
+    <a href="#systems">Systems</a>
+    <a href="#process">Process</a>
+    <a href="#output">Impact</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <a class="nav-cta" href="#contact">Get an assessment</a>
+</nav>
+
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <h1 class="hero-title">M Power Solar Systems</h1>
+    <p class="hero-sub">M Power Solar Systems designs, installs, and monitors solar arrays that turn ordinary daylight into a permanent cut on your power bill — engineered for your roof, not a catalog.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#contact">Get a free site assessment</a>
+      <a class="btn-ghost" href="#process">See how it works ↓</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><span class="value">25-YR</span><span class="label">Panel performance warranty</span></div>
+  <div class="stat"><span class="value">1–2 DAY</span><span class="label">Typical residential install</span></div>
+  <div class="stat"><span class="value">24/7</span><span class="label">Live production monitoring</span></div>
+  <div class="stat"><span class="value">100%</span><span class="label">Custom-engineered per roof</span></div>
+</div>
+
+<section class="block" id="process">
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">The process</span>
+      <h2 class="section-title">From roof survey to switched-on, in three moves.</h2>
+    </div>
+    <p class="section-note">No two roofs get the same layout. Every install starts with real measurements, not estimates.</p>
+  </div>
+  <div class="process">
+    <div class="proc-step">
+      <span class="proc-num">01 / ASSESS</span>
+      <div class="proc-title">Site survey &amp; modeling</div>
+      <p class="proc-desc">We map your roof's pitch, shading, and orientation, then model expected output before you commit to anything.</p>
+    </div>
+    <div class="proc-step">
+      <span class="proc-num">02 / INSTALL</span>
+      <div class="proc-title">Design &amp; installation</div>
+      <p class="proc-desc">A layout engineered for your specific roof, installed by our certified crews — most homes are done in a day or two.</p>
+    </div>
+    <div class="proc-step">
+      <span class="proc-num">03 / ACTIVATE</span>
+      <div class="proc-title">Grid connection &amp; monitoring</div>
+      <p class="proc-desc">We handle utility sign-off and hand you a live dashboard so you can watch your system produce from day one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="systems">
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">Systems</span>
+      <h2 class="section-title">Built for how you actually use power.</h2>
+    </div>
+    <p class="section-note">Three system types, each engineered around a different load profile.</p>
+  </div>
+  <div class="systems">
+    <div class="sys-card">
+      <div class="sys-icon">◐</div>
+      <div class="sys-title">Residential Arrays</div>
+      <p class="sys-desc">Rooftop systems sized to your household's real usage, not a generic package — designed to offset the bulk of your bill.</p>
+      <div class="sys-spec">3–12 kW typical range</div>
+    </div>
+    <div class="sys-card">
+      <div class="sys-icon">▣</div>
+      <div class="sys-title">Commercial Systems</div>
+      <p class="sys-desc">Roof and ground-mount arrays for warehouses, offices, and facilities with heavier, steadier daytime loads.</p>
+      <div class="sys-spec">20 kW+ configurations</div>
+    </div>
+    <div class="sys-card">
+      <div class="sys-icon">⚡</div>
+      <div class="sys-title">Battery Storage</div>
+      <p class="sys-desc">Store what you generate during the day so daylight keeps your home running after the sun goes down.</p>
+      <div class="sys-spec">Grid &amp; off-grid ready</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="output">
+  <div class="readout">
+    <div class="readout-copy">
+      <span class="section-eyebrow">What ownership looks like</span>
+      <h2 class="section-title">Production you can watch, not just take our word for.</h2>
+      <p>Every system ships with real-time monitoring, so the numbers below aren't a sales projection — they're what your dashboard actually shows once you're live.</p>
+    </div>
+    <div class="gauge">
+      <div class="gauge-row"><span class="gauge-label">SYSTEM SIZE</span><span class="gauge-value">6.4 kW</span></div>
+      <div class="gauge-row"><span class="gauge-label">EST. DAILY OUTPUT</span><span class="gauge-value gold" id="kwh-counter">0.0 kWh</span></div>
+      <div class="gauge-row"><span class="gauge-label">PANEL ORIENTATION</span><span class="gauge-value">Auto-optimized</span></div>
+      <div class="gauge-row"><span class="gauge-label">MONITORING</span><span class="gauge-value">Live</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2 class="cta-title">Ready to put your roof to work?</h2>
+  <p class="cta-sub">A free assessment takes about 20 minutes and tells you exactly what your roof could generate.</p>
+  <a class="btn-primary" href="#">Request your free assessment</a>
+</section>
+
+<footer>
+  <div>
+    <div class="brand"><span class="mark"></span><span class="m">M</span>&nbsp;Power Solar Systems</div>
+    <div>Daylight, engineered into a utility.</div>
+  </div>
+  <div class="footer-links">
+    <a href="#systems">Systems</a>
+    <a href="#process">Process</a>
+    <a href="#output">Impact</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="m-power-solar.js"></script>
+
+</body>
+</html>
