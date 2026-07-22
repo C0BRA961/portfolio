@@ -15,7 +15,7 @@ function resizeCanvas() {
 }
 
 // Configuration
-const characters = "0096270845745GHOSTDEVELOPER";
+const characters = "0123456789ABCDEFHIJKLMNOPQRSTUVXYZ";
 const fontSize = 16;
 let columns;
 let drops;
