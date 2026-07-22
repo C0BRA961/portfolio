@@ -1,4 +1,4 @@
-const canvas = document.getElementById('bg-canvas');
+const canvas = document.getElementById('bg-canvas'); // Make sure this ID exists in your HTML
 const ctx = canvas.getContext('2d');
 
 // Set Canvas size
@@ -9,25 +9,30 @@ function resizeCanvas() {
     // Set the canvas drawing buffer size to match its display size
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
+
+    // Scale the context to avoid blurry rendering on HiDPI displays
+    ctx.scale(dpr, dpr);
 }
-resizeCanvas();
+
+// Configuration
+const characters = "0123456789ABCDEFHIJKLMNOPQRSTUVXYZ";
+const fontSize = 16;
+let columns;
+let drops;
+
+function initializeMatrix() {
+    resizeCanvas();
+    columns = Math.floor(canvas.width / window.devicePixelRatio / fontSize);
+    drops = Array(columns).fill(1);
+}
+initializeMatrix();
 
 // Debounced resize handler for performance
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        resizeCanvas();
-        // Recalculate columns and reset drops on resize
-        columns = Math.floor(canvas.width / fontSize);
-        drops.fill(1), 150);
+    resizeTimeout = setTimeout(initializeMatrix, 150);
 });
-
-// Configuration
-const characters = "0123456789ABCDEFHIJKLMNOPQRSTUVXYZ";
-const fontSize = 16;
-const columns = Math.floor(canvas.width / fontSize);
-const drops = Array(columns).fill(1);
 
 function draw() {
     // Semi-transparent black to create trailing effect
