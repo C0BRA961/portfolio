@@ -20,8 +20,7 @@ window.addEventListener('resize', () => {
         resizeCanvas();
         // Recalculate columns and reset drops on resize
         columns = Math.floor(canvas.width / fontSize);
-        drops.fill(1);
-    }, 150);
+        drops.fill(1), 150);
 });
 
 // Configuration
