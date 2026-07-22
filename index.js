@@ -33,4 +33,51 @@ document.addEventListener('DOMContentLoaded', () => {
     yearSpan.textContent = new Date().getFullYear();
   }
 
+  // Reveal animations with Intersection Observer
+  const revealElements = document.querySelectorAll('[data-reveal]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  revealElements.forEach(element => {
+    observer.observe(element);
+  });
+
+  // Copy to clipboard functionality
+  const copyBtns = document.querySelectorAll('.copy-btn');
+  const toast = document.getElementById('toast');
+
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const textToCopy = btn.getAttribute('data-copy');
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // Show toast
+        toast.classList.add('show');
+        
+        // Hide toast after 3 seconds
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3000);
+      });
+    });
+  });
+
+  // Scroll event for nav styling
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('site-nav');
+    if (window.scrollY > 0) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
 });
