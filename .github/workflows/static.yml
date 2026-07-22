@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload the 'portfolio' directory, respecting case sensitivity
-          path: './portfolio'
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
