@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the 'Portfolio' directory
+          # Upload the 'portfolio' directory, respecting case sensitivity
           path: './portfolio'
       - name: Deploy to GitHub Pages
         id: deployment
